@@ -1,0 +1,110 @@
+div{
+    border: 1px solid black;
+    height: 100vh;
+    padding: 22px; 
+}
+#hover{
+    border: 1px solid black;
+    background-color:blueviolet;
+    color: white;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    display: none;
+
+}
+#hover{
+    animation-name: popup;
+    animation-timing-function:ease;
+    animation-duration: 2s;
+   
+}
+@keyframes popup {
+    from{
+        top: 600px;
+    }
+    to{
+        top: 100px;
+    }
+}
+button:hover +#hover{
+    display: block;
+    top: 100px;
+    left: 500px;
+    
+}
+#image{
+    border: 1px solid black;
+    height: 100vh;
+    padding: 150px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+#img1{
+    width: 400px;
+     height: 300px;
+}
+#img2{
+    width: 400px;
+     height: 300px;
+    }
+
+#slide1{
+    border: 1px solid black;
+    background-color: #ccc;
+    width: 399px; 
+    height: 55px;
+    position: absolute;
+   display: none;
+   opacity: 0.7;
+   text-align: center;
+   animation-name: popup_1;
+   animation-timing-function:ease;
+   animation-duration: 2s;
+   line-height: 50px;
+}
+
+
+@keyframes popup_1{
+    from{
+      top : 1000px;
+    }
+    to{
+        top: 820px;
+    }
+}
+#img1:hover +#slide1{
+    display: block;
+    top: 820px; 
+}
+
+#slide2{
+    border: 1px solid black;
+    background-color: #ccc;
+    width: 398px;
+    height: 50px;
+    position: absolute;
+   display: none;
+   opacity: 0.7;
+   text-align: center;
+   line-height: 50px;
+   animation-name: popup_2;
+   animation-timing-function:ease;
+   animation-duration: 2s;
+} 
+
+@keyframes popup_2{
+    from{
+      top : 1000px;
+    }
+    to{
+        top: 830px;
+    }
+}
+#img2:hover +#slide2{
+    display: block;
+    top: 830px;
+}
+
+
